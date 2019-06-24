@@ -1,0 +1,24 @@
+{
+  "name": "elma",
+  "version": "0.0.0-beta",
+  "description": "A needed companion for any active community!",
+  "main": "bin/index.js",
+  "repository": "git@github.com:Hydractify/elma.git",
+  "author": "Alexandre Cavalheiro S. Tiago Da Silva <alexandre.cssilva@gmail.com>",
+  "license": "GPL-3.0",
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^12.0.10",
+    "@typescript-eslint/eslint-plugin-tslint": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "discord.js": "discordjs/discord.js",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^4.0.9",
+    "typeorm": "^0.2.18"
+  }
+}
