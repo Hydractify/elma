@@ -7,6 +7,8 @@ module.exports =
 	extends:
 	[
 		'eslint:recommended',
+		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended',
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions:
@@ -21,19 +23,55 @@ module.exports =
 	},
 	plugins:
 	[
-		'@typescript-eslint/tslint',
+		'@typescript-eslint',
 	],
 	root: true,
 	rules:
 	{
-		// tslint
-		'@typescript-eslint/tslint/config':
-		[1,
-		{
-			lintFile: `${__dirname}/tslint.json`,
-		}
+		/*
+		 * ESLint rules
+		 */
+		'brace-styles':
+		[
+			'error',
+			'allman',
 		],
-		'no-console': 'off',
-		'no-await-in-loop': 'off',
+		'curly':
+		[
+			'error',
+			'ignore-same-line',
+		],
+		'quotes':
+		[
+			'error',
+			'single',
+		],
+		'quote-props':
+		[
+			'error',
+			'as-needed',
+		],
+		'no-underscore-dangle': 'error',
+		'radix': false,
+		/*
+		 * TSLint rules
+		 */
+		'@typescript-eslint/array-type':
+		[
+			true,
+			'array',
+		],
+		'@typescript-eslint/indent':
+		[
+			true,
+			'tabs',
+			4,
+		],
+		'@typescript-eslint/interface-name-prefix':
+		[
+			true,
+			'always-prefix',
+		],
+		'@typescript-eslint/no-var-requires': false,
 	}
 };

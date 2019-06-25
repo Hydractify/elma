@@ -9,10 +9,9 @@
   "private": false,
   "devDependencies": {
     "@types/node": "^12.0.10",
-    "@typescript-eslint/eslint-plugin-tslint": "^1.11.0",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "eslint": "^6.0.0",
-    "tslint": "^5.18.0",
     "typescript": "^3.5.2"
   },
   "dependencies": {
