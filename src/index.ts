@@ -1,21 +1,23 @@
-import "reflect-metadata";
-import {createConnection} from "typeorm";
-import {User} from "./entity/User";
+import { Client } from 'discord.js';
+import { createConnection } from 'typeorm';
 
-createConnection().then(async connection => {
+// Creates a new Discord Client
+const discordClient = new Client();
 
-    console.log("Inserting a new user into the database...");
-    const user = new User();
-    user.firstName = "Timber";
-    user.lastName = "Saw";
-    user.age = 25;
-    await connection.manager.save(user);
-    console.log("Saved a new user with id: " + user.id);
+// TODO: Figure out why linter was not finding the file through import
+const { discordToken } = require('../data.json');
+discordClient
+	.login(discordToken)
+	.catch(() => undefined);
 
-    console.log("Loading users from the database...");
-    const users = await connection.manager.find(User);
-    console.log("Loaded users: ", users);
+discordClient.on('ready', () => process.stdout.write('Bot is on'));
 
-    console.log("Here you can setup and run express/koa/any other framework.");
+process.on('unhandledRejection', (error) => process.stderr.write(error!.toString()));
 
-}).catch(error => console.log(error));
+// Starts the database connection
+createConnection
+({
+	database: 'elmaDatabase', // database's name
+	type: 'sqlite',           // sqlite3 only
+})
+	.then(() => process.stdout.write('[DATABASE] Ready.'));

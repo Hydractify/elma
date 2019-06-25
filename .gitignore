@@ -3,3 +3,9 @@ node_modules/
 
 /* Ignore compiled code folder */
 bin/
+
+/* Ignore the sensitive data file */
+data.json
+
+/* Ignore the database file */
+elmaDatabase
