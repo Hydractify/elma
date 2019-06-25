@@ -31,7 +31,7 @@ module.exports =
 		/*
 		 * ESLint rules
 		 */
-		'brace-styles':
+		'brace-style':
 		[
 			'error',
 			'allman',
@@ -51,6 +51,11 @@ module.exports =
 		[
 			'error',
 			'as-needed',
+		],
+		'semi':
+		[
+			'error',
+			'always',
 		],
 		'no-underscore-dangle': 'error',
 		'radix': 'off',
