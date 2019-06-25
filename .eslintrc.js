@@ -39,8 +39,9 @@ module.exports =
 		'curly':
 		[
 			'error',
-			'ignore-same-line',
+			'multi',
 		],
+		'indent': 'off',
 		'quotes':
 		[
 			'error',
@@ -52,26 +53,25 @@ module.exports =
 			'as-needed',
 		],
 		'no-underscore-dangle': 'error',
-		'radix': false,
+		'radix': 'off',
 		/*
 		 * TSLint rules
 		 */
 		'@typescript-eslint/array-type':
 		[
-			true,
+			'error',
 			'array',
 		],
 		'@typescript-eslint/indent':
 		[
-			true,
-			'tabs',
-			4,
+			'error',
+			'tab',
 		],
 		'@typescript-eslint/interface-name-prefix':
 		[
-			true,
-			'always-prefix',
+			'error',
+			'always',
 		],
-		'@typescript-eslint/no-var-requires': false,
+		'@typescript-eslint/no-var-requires': 'warn',
 	}
 };
