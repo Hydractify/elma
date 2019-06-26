@@ -6,4 +6,7 @@
 module.exports = {
 	// Discord Application Token (https://discordapp.com/developers/applications/)
 	discordToken: '',
+
+	// Sentry.io DSN
+	sentryDSN: '',
 };

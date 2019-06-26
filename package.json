@@ -12,10 +12,13 @@
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "eslint": "^6.0.0",
+    "generic-pool": "^3.7.1",
     "typescript": "^3.5.2"
   },
   "dependencies": {
+    "@sentry/node": "5.4.3",
     "discord.js": "discordjs/discord.js",
+    "moment": "^2.24.0",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^4.0.9",
     "typeorm": "^0.2.18"

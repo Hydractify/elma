@@ -58,7 +58,6 @@ module.exports =
 			'always',
 		],
 		'no-unexpected-multiline': 'off',
-		'no-underscore-dangle': 'error',
 		'radix': 'off',
 		/*
 		 * TSLint rules
@@ -78,6 +77,7 @@ module.exports =
 			'error',
 			'always',
 		],
+		'@typescript-eslint/no-explicit-any': 'off',
 		'@typescript-eslint/no-var-requires': 'warn',
 	}
 };
