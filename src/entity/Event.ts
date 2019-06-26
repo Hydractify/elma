@@ -4,32 +4,32 @@ import { Column, Entity, PrimaryColumn } from 'typeorm';
 export class Event
 {
 	@PrimaryColumn()
-	id: number;
+	protected id!: number;
 
 	@Column()
-	title: string;
+	protected title!: string;
 
 	@Column()
-	description?: string;
+	protected description?: string;
 
 	@Column
 	({
 		type: 'datetime',
 	})
-	timestamp: number;
+	protected timestamp!: number;
 
 	@Column()
-	host: number;
+	protected host!: number;
 
 	@Column
 	({
 		type: 'text',
 	})
-	prizes?: string;
+	protected prizes?: string;
 
 	@Column()
-	duration: number;
+	protected duration!: number;
 
 	@Column()
-	banner?: string;
+	protected banner?: string;
 }

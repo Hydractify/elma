@@ -57,6 +57,7 @@ module.exports =
 			'error',
 			'always',
 		],
+		'no-unexpected-multiline': 'off',
 		'no-underscore-dangle': 'error',
 		'radix': 'off',
 		/*

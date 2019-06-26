@@ -10,7 +10,6 @@
 		"rootDir": "src",
 		"sourceMap": true,
 		"strict": true,
-		"strictPropertyInitialization": false,
 		"target": "esnext"
 	},
 	"exclude": ["bin", "node_modules"]

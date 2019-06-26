@@ -4,5 +4,5 @@ import { Entity, Column } from 'typeorm';
 export class Server
 {
 	@Column()
-	eventRoles: string;
+	protected eventRoles!: string;
 }

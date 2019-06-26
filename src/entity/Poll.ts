@@ -4,26 +4,27 @@ import { Entity, Column, PrimaryColumn } from 'typeorm';
 export class Poll
 {
 	@PrimaryColumn()
-	id: number;
+	protected id!: number;
 
 	@Column()
-	title: string;
+	protected title!: string;
 
 	@Column()
-	description?: string;
+	protected description?: string;
 
 	@Column
 	({
 		type: 'datetime',
 	})
-	timestamp: number;
+	protected timestamp!: number;
 
 	@Column()
-	host: string;         // host's discord id
+	protected host!: string;         // host's discord id
 
 	@Column
 	({
 		type: 'text',
 	})
-	prizes?: Object;
+	/* eslint-disable @typescript-eslint/no-explicit-any */
+	protected prizes?: Record<string, any>;
 }

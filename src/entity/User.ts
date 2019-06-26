@@ -7,5 +7,5 @@ export class User
 	({
 		type: 'datetime',
 	})
-	timezone: number;
+	protected timezone!: number;
 }
